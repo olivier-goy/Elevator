@@ -24,7 +24,7 @@ angular.module("elevator", []).
       floor: 3,
       open: false,
       occupied: false
-    }
+    };
 
     // Object representing the control panel in the car
     $scope.panel = {
@@ -37,7 +37,7 @@ angular.module("elevator", []).
       },
       stop: function () {
       }
-    }
+    };
 
     // Floors
     var floors = $scope.floors = [];
@@ -52,7 +52,12 @@ angular.module("elevator", []).
       floor.light = null;
     });
 
+    $scope.press = function ($index) {
+      $scope.floor = "red";
+    }; // test for controls in car.
+
     $interval(function () {
       // TODO: Move the car if necessary
+
     }, 1000);
   }]);
